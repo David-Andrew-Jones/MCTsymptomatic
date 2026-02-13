@@ -1,0 +1,5 @@
+symp_cluster,param,I,II,III,IV
+HTA,mu,4.46,4.21,3.97,3.75
+HTA,sigma,1,1.08,1.06,1.08
+madeup,mu,5,4.21,3,3.75
+madeup,sigma,1,1.08,1,1.08

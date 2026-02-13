@@ -1,0 +1,28 @@
+Package: MCTsymptomatic
+Type: Package
+Title: Modelling Stage-Shift And Mortality Reduction Through MCT Triaging of Sympomatic Patients
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "David", "Jones",
+      email = "david.jones@phc.ox.ac.uk",
+      role = c("aut", "cre")
+    )
+  )
+Description: This package contains the model functions and analysis code for the study
+    "Modelled stage-shift and mortality reductions associated with multi-cancer test triaging of patients with cancer symptoms presenting to primary care"
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Depends:
+    dplyr,
+    tidyr,
+    stringr,
+    ggplot2,
+    ggpubr,
+    openxlsx,
+    purrr,
+    gt,
+    forcats,
+    R (>= 3.5)
+RoxygenNote: 7.3.3
