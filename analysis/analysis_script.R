@@ -19,6 +19,7 @@ bind_cols(sort(as.character(colnames(sens_bystypestage %>% select(-cancer_type,-
 #' requires dwelltime_bystypestage, sens_bystypestage, CPRD_revised_any, waiting_bystage_symp
 
 df_all_cohort_combinations <- expand.grid(symp_cluster = c("HTA","madeup"),
+                                          # Limit to just one dwell now!
                                          dwell = c("dwell1"),
                                          timepoint_of_impact = c(14, 28, 42),
                                          reduction_after = c(50, 70, 90),
@@ -148,6 +149,7 @@ addWorksheet(excel_output, sheetName = "3. Mortality reduction")
 writeData(excel_output, sheet = "3. Mortality reduction", df_mort_byscen)
 
 # Save gt format as word doc to copy in to manuscrupt - cant save into excel in gt format
+# Note gtsave can't handle ~, therefore I've had to specify my c drive, feel free to change.
 gt(df_mort_byscen %>%
      mutate(`Number (%) of cancer deaths at 5 years averted` = paste0(`Number of cancer deaths at 5 years averted`, " (", `Percentage averted`,")" )) %>%
      select(scenario,  `Number of cancer deaths at 5 years under usual care`, `Number (%) of cancer deaths at 5 years averted`) %>%
